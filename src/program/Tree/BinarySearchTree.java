@@ -1,6 +1,9 @@
 package program.Tree;
 
 /**
+ * 随机构建的二叉搜索树期望高度为O(lgn);构建的最坏时间复杂度O(n2)，平均时间复杂度O(nlgn)
+ * 中序遍历得到排序数组，时间复杂度O(n)
+ *
  * Created by wdfwolf3 on 2017/5/17.
  */
 public class BinarySearchTree {
