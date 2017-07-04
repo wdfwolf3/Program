@@ -1,4 +1,4 @@
-package program;
+package program.javaTest.compare;
 
 /**
  * Created by wdfwolf3 on 2017/2/16.
