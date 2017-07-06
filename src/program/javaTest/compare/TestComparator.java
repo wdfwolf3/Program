@@ -1,4 +1,4 @@
-package program;
+package program.javaTest.compare;
 
 import java.util.Comparator;
 
