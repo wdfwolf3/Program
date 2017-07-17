@@ -3,28 +3,28 @@ package program.Tree;
 /**
  * 随机构建的二叉搜索树期望高度为O(lgn);构建的最坏时间复杂度O(n2)，平均时间复杂度O(nlgn)
  * 中序遍历得到排序数组，时间复杂度O(n)
- *
+ * <p>
  * Created by wdfwolf3 on 2017/5/17.
  */
 public class BinarySearchTree {
-    public BinarySearchTreeNode root;
+    public TreeNode root;
 
-    public BinarySearchTree(BinarySearchTreeNode root) {
+    public BinarySearchTree(TreeNode root) {
         this.root = root;
     }
 
-    public BinarySearchTreeNode MinimumNode() {
+    public TreeNode MinimumNode() {
         return MinimumNode(root);
     }
 
-    public BinarySearchTreeNode MaximumNode() {
+    public TreeNode MaximumNode() {
         return MaximumNode(root);
     }
 
-    public void insert(BinarySearchTreeNode node) {
+    public void insert(TreeNode node) {
         if (root == null) root = node;
-        BinarySearchTreeNode parent = root;
-        BinarySearchTreeNode child = root;
+        TreeNode parent = root;
+        TreeNode child = root;
         while (child != null) {
             parent = child;
             if (node.value < child.value) child = child.left;
@@ -35,13 +35,13 @@ public class BinarySearchTree {
         else parent.right = node;
     }
 
-    public void delete(BinarySearchTreeNode node) {
+    public void delete(TreeNode node) {
         if (node.left == null) {
             transplant(node, node.right);
         } else if (node.right == null) {
             transplant(node, node.left);
         } else {
-            BinarySearchTreeNode successor = node.successor();
+            TreeNode successor = node.getSuccessor();
             if (node.right != successor) {
                 transplant(successor, successor.right);
                 successor.right = node.right;
@@ -55,25 +55,23 @@ public class BinarySearchTree {
         oldNode != null;否则找不到其父节点
         注意判断是否根节点
      */
-    public void transplant(BinarySearchTreeNode oldNode, BinarySearchTreeNode newNode) {
-        if(oldNode.parent!=null){
+    public void transplant(TreeNode oldNode, TreeNode newNode) {
+        if (oldNode.parent != null) {
             if (oldNode.parent.left == oldNode) oldNode.parent.left = newNode;
             else oldNode.parent.right = newNode;
         }
         if (newNode != null) newNode.parent = oldNode.parent;
     }
 
-    public static BinarySearchTreeNode MinimumNode(BinarySearchTreeNode root) {
-        if (root != null) {
+    public static TreeNode MinimumNode(TreeNode root) {
+        if (root != null)
             while (root.left != null) root = root.left;
-        }
         return root;
     }
 
-    public static BinarySearchTreeNode MaximumNode(BinarySearchTreeNode root) {
-        if (root != null) {
+    public static TreeNode MaximumNode(TreeNode root) {
+        if (root != null)
             while (root.right != null) root = root.right;
-        }
         return root;
     }
 }
