@@ -1,4 +1,4 @@
-package program.sort;
+package program.javaTest;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 /**
  * Created by wdfwolf3 on 2017/2/15.
  */
-public class Test1 {
+public class PatternTest {
     public static void main(String[] args) {
 //        try{
 //            Socket socket = new Socket("localhost", 8080);

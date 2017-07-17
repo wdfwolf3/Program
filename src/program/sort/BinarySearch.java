@@ -2,51 +2,49 @@ package program.sort;
 
 /**
  * program.sort.BinarySearch,二分查找
- *
+ * <p>
  * Created by Fung on 2017/1/16.
  */
 public class BinarySearch {
     /**
      * 非递归二分查找,不断更新左右下标.
      *
-     * @param nums    目标数组
-     * @param target  目标数
-     * @return        返回查找的下标,没有查找到返回0
+     * @param nums   目标数组
+     * @param target 目标数
+     * @return 返回查找的下标, 没有查找到返回0
      */
-    public static int binarySearch(int[] nums, int target){
-        int left = 0, right = nums.length-1;
-        while(left<right){
-            int middle = (left+right)/2;
-            if(nums[middle] == target){
+    public static int binarySearch(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int middle = (left + right) / 2;
+            if (nums[middle] == target)
                 return middle;
-            }else if (nums[middle] > target){
+            else if (nums[middle] > target)
                 right = middle - 1;
-            }else {
+            else
                 left = middle + 1;
-            }
         }
-        return (nums[left]==target)?left:-1;
+        return (nums[left] == target) ? left : -1;
     }
 
     /**
      * 递归二分查找,根据中间数与目标数比较结果,缩小待查数组范围
      *
-     * @param nums        目标数组
-     * @param target      目标数
-     * @param left,right  待查子数组左右下标
-     * @return            返回查找的下标,没有查找到返回0
+     * @param nums       目标数组
+     * @param target     目标数
+     * @param left,right 待查子数组左右下标
+     * @return 返回查找的下标, 没有查找到返回0
      */
-    public static int binarySearch(int[] nums, int target, int left, int right){
-        if(left == right){
-            return (nums[left]==target)?left:-1;
-        }
+    public static int binarySearch(int[] nums, int target, int left, int right) {
+        if (left == right)
+            return (nums[left] == target) ? left : -1;
         int middle = (left + right) / 2;
-        if(nums[middle] == target)
+        if (nums[middle] == target)
             return middle;
         else if (nums[middle] > target)
-            return binarySearch(nums, target, left, middle-1);
+            return binarySearch(nums, target, left, middle - 1);
         else
-            return binarySearch(nums, target, middle+1, right);
+            return binarySearch(nums, target, middle + 1, right);
     }
 
     /**
@@ -56,18 +54,17 @@ public class BinarySearch {
      * @param target
      * @return
      */
-    public static int lowestBinarySearch(int[] nums, int target){
-       int left = 0, right = nums.length - 1, result = -1;
-       while(left < right){
-           int middle = (left + right) / 2;
-           if (nums[middle] >= target){
-               right = middle - 1;
-               result = middle;
-           }else{
-               left = middle + 1;
-           }
-       }
-       return (nums[left]==target)?left:result;
+    public static int lowestBinarySearch(int[] nums, int target) {
+        int left = 0, right = nums.length - 1, result = -1;
+        while (left < right) {
+            int middle = (left + right) / 2;
+            if (nums[middle] >= target) {
+                right = middle - 1;
+                result = middle;
+            } else
+                left = middle + 1;
+        }
+        return (nums[left] == target) ? left : result;
     }
 
     /**
@@ -77,17 +74,17 @@ public class BinarySearch {
      * @param target
      * @return
      */
-    public static int highestBinarySearch(int[] nums, int target){
+    public static int highestBinarySearch(int[] nums, int target) {
         int left = 0, right = nums.length - 1, result = -1;
-        while(left < right){
+        while (left < right) {
             int middle = (left + right) / 2;
-            if (nums[middle] > target){
+            if (nums[middle] > target)
                 right = middle - 1;
-            }else{
+            else {
                 result = middle;
                 left = middle + 1;
             }
         }
-        return (nums[left]==target)?left:result;
+        return (nums[left] == target) ? left : result;
     }
 }
