@@ -11,6 +11,8 @@ public class Main {
 //        BubbleSort.bubbleSort(nums);
 //        SelectSort.selectSort(nums);
 //        nums = MergeSort.mergeSort(nums);
+        HeapSort.createMaxHeap(nums);
+        HeapSort.heapSortDec(nums);
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
         }
