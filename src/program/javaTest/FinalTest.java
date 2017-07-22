@@ -1,15 +1,17 @@
 package program.javaTest;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
  * Created by wdfwolf3 on 2017/6/8.
  */
-public class FinalTest {
+public class FinalTest extends Father{
     public static void main(String[] args) {
         test1();
         test2();
+        Boolean
     }
 
     public static void test1(){
@@ -48,6 +50,22 @@ public class FinalTest {
     }
 
     public static void test2(){
+
+    }
+
+    public final void fi(){
+
+    }
+
+    public void fi(int i){
+
+    }
+}
+
+class Father{
+    private int n = 0;
+
+    public Father(){
 
     }
 }
