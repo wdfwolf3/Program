@@ -7,6 +7,15 @@ import java.util.Random;
  */
 public class RandomGeneTest {
     public static void main(String[] args) {
+        //伪随机，seed不变得到的序列不变
+        Random random0 = new Random(10);
+        int[] nums0 = new int[10];
+        for (int i = 0; i < 10; i++){
+            nums0[i] = random0.nextInt(10);
+            System.out.println(nums0[i]);
+        }
+
+
         int[] nums = new int[10000000];
         long start = System.currentTimeMillis();
         for (int i = 0; i < 10000000; i++)
