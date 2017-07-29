@@ -11,7 +11,6 @@ public class FinalTest extends Father{
     public static void main(String[] args) {
         test1();
         test2();
-        Boolean
     }
 
     public static void test1(){
@@ -58,14 +57,6 @@ public class FinalTest extends Father{
     }
 
     public void fi(int i){
-
-    }
-}
-
-class Father{
-    private int n = 0;
-
-    public Father(){
 
     }
 }
