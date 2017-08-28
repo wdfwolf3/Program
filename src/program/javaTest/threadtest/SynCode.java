@@ -1,10 +1,10 @@
-package program.MyThread;
+package program.javaTest.threadtest;
 
 /**
  * Created by wdfwolf3 on 2017/5/5.
  */
 public class SynCode {
-    public synchronized void synCode(int id){
+    public synchronized void synCode(int id) {
         for (int i = 0; i < 10; i++) {
             System.out.println(id + ":syn");
             try {
@@ -15,7 +15,7 @@ public class SynCode {
         }
     }
 
-    public void notSynCode(){
+    public void notSynCode() {
         for (int i = 0; i < 10; i++) {
             System.out.println("notSyn");
             try {

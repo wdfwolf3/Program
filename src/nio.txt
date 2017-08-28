@@ -1,3 +1,2 @@
-asdflaksjdfl
-sajdfals
-asldkf
+program.javaTest.reflect.DynamicOne
+program.javaTest.reflect.DynamicTwo

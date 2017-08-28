@@ -5,9 +5,10 @@ package program.niuke;
  */
 public class FirstAppearingOnce {
     private String string = "";
+
     // Insert one char from stringstream
     public void Insert(char ch) {
-        int index = string.indexOf(new String(new char[] { ch }));
+        int index = string.indexOf(new String(new char[]{ch}));
         if (index == -1)
             string += ch;
         else if (index == string.length() - 1)
@@ -18,7 +19,7 @@ public class FirstAppearingOnce {
 
     // return the first appearence once char in current stringstream
     public char FirstAppearingOnce() {
-        return string.length()==0?'#':string.charAt(0);
+        return string.length() == 0 ? '#' : string.charAt(0);
     }
 
     public static void main(String[] args) {

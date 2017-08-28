@@ -1,6 +1,5 @@
 package program.niuke;
 
-import java.lang.reflect.MalformedParameterizedTypeException;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;

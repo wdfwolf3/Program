@@ -25,16 +25,16 @@ public class Test1 {
         System.out.println(res);
     }
 
-    public static Long guessMyPath(List<Long[]> dimList){
-        Long[][] distance = new Long[dimList.size()+1][dimList.size()+1];
-        Long[] mine = {0l,0l,0l,0l,0l};
+    public static Long guessMyPath(List<Long[]> dimList) {
+        Long[][] distance = new Long[dimList.size() + 1][dimList.size() + 1];
+        Long[] mine = {0l, 0l, 0l, 0l, 0l};
         for (int i = 1; i <= dimList.size(); i++) {
-            distance[0][i] = help(mine, dimList.get(i-1));
+            distance[0][i] = help(mine, dimList.get(i - 1));
             distance[i][0] = distance[0][i];
         }
         for (int i = 1; i <= dimList.size(); i++) {
-            for (int j = i+1; j <= dimList.size(); j++) {
-                distance[i][j] = help(dimList.get(i-1), dimList.get(j-1));
+            for (int j = i + 1; j <= dimList.size(); j++) {
+                distance[i][j] = help(dimList.get(i - 1), dimList.get(j - 1));
                 distance[j][i] = distance[i][j];
             }
         }
@@ -47,21 +47,21 @@ public class Test1 {
         for (int i = 0; i < dimList.size(); i++) {
             Long max = Long.MAX_VALUE;
             int index = 1;
-            for (Integer integer : set){
-                if (max > distance[p][integer+1]){
-                    max = distance[p][integer+1];
+            for (Integer integer : set) {
+                if (max > distance[p][integer + 1]) {
+                    max = distance[p][integer + 1];
                     index = integer;
                 }
             }
             set.remove(index);
-            p = index +1;
+            p = index + 1;
             ans += max;
         }
         ans += distance[0][p];
         return ans;
     }
 
-    public static Long help(Long[] dim1, Long[] dim2){
-        return Math.abs(dim1[0]-dim2[0])+Math.abs(dim1[1]-dim2[1])+Math.abs(dim1[2]-dim2[2])+10*Math.abs(dim1[3]-dim2[3])+100*Math.abs(dim1[4]-dim2[4]);
+    public static Long help(Long[] dim1, Long[] dim2) {
+        return Math.abs(dim1[0] - dim2[0]) + Math.abs(dim1[1] - dim2[1]) + Math.abs(dim1[2] - dim2[2]) + 10 * Math.abs(dim1[3] - dim2[3]) + 100 * Math.abs(dim1[4] - dim2[4]);
     }
 }

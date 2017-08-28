@@ -4,7 +4,7 @@ package program.niuke;
  * Created by Fung on 2017/7/13.
  */
 public class PrintN {
-    public void printN(String n){
+    public void printN(String n) {
 //        StringBuilder stringBuilder = new StringBuilder('0');
 //        int index = stringBuilder.length();
 //        for (stringBuilder.equals(n)){

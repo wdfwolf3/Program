@@ -27,15 +27,15 @@ public class Sett {
 //        }
     }
 
-    static synchronized void hello(){
+    static synchronized void hello() {
         System.out.println("hello");
     }
 
-    private static int fib(int n){
+    private static int fib(int n) {
         int cnt = 0;
-        while (n>0){
+        while (n > 0) {
             cnt++;
-            n = n&(n-1);
+            n = n & (n - 1);
         }
         return cnt;
     }

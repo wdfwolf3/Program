@@ -1,9 +1,9 @@
-package program.MyThread;
+package program.javaTest.threadtest;
 
 /**
  * Created by wdfwolf3 on 2017/5/5.
  */
-public class Thread2 implements Runnable{
+public class Thread2 implements Runnable {
     SynCode synCode = new SynCode();
 
     public Thread2(SynCode synCode) {
@@ -11,7 +11,7 @@ public class Thread2 implements Runnable{
     }
 
     @Override
-    public void run(){
+    public void run() {
         SynCode synCode = new SynCode();
         synCode.synCode(2);
     }

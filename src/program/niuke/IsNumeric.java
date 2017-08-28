@@ -1,7 +1,5 @@
 package program.niuke;
 
-import javax.xml.stream.events.Characters;
-
 /**
  * Created by Fung on 2017/7/10.
  */
@@ -13,21 +11,21 @@ public class IsNumeric {
         String[] e = string.split("e|E");
         if (e.length > 2 || string.endsWith("e") || string.endsWith("E"))
             return false;
-        return isNum(e[0], false)&&(e.length != 2 || isNum(e[1], true));
+        return isNum(e[0], false) && (e.length != 2 || isNum(e[1], true));
     }
 
-    private boolean isNum(String string, boolean s){
+    private boolean isNum(String string, boolean s) {
         if (string == null || string.length() == 0 || string.equals("+") || string.equals("-"))
             return false;
-        int i = string.charAt(0)=='+'||string.charAt(0)=='-'?1:0;
+        int i = string.charAt(0) == '+' || string.charAt(0) == '-' ? 1 : 0;
         for (; i < string.length(); i++) {
             char c = string.charAt(i);
-            if (c == '.'){
-                if (s || i == string.length()-1)
+            if (c == '.') {
+                if (s || i == string.length() - 1)
                     return false;
                 else
                     s = true;
-            }else if (Character.isDigit(c))
+            } else if (Character.isDigit(c))
                 continue;
             else
                 return false;

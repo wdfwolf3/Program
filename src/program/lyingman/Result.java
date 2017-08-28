@@ -7,10 +7,8 @@ public enum Result {
     胜, 负;
 
 
-
-
     @Override
-    public String toString(){
+    public String toString() {
         return name();
     }
 }
