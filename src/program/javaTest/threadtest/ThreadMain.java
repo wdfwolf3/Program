@@ -1,4 +1,4 @@
-package program.MyThread;
+package program.javaTest.threadtest;
 
 /**
  * Created by wdfwolf3 on 2017/5/5.

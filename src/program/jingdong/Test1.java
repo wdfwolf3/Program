@@ -20,29 +20,29 @@ public class Test1 {
 //            String str = sc.next();
 //            System.out.println(Pattern.matches(he, str));
 //        }
-        int i=5,j=1;
-        System.out.println(i+j+"dd"+i+j);
-        try{
-            test("100","abc");
-            test("5","0");
-        }catch (Exception e){
+        int i = 5, j = 1;
+        System.out.println(i + j + "dd" + i + j);
+        try {
+            test("100", "abc");
+            test("5", "0");
+        } catch (Exception e) {
             System.out.println("E");
         }
 
     }
 
-    public static int test(String s, String t) throws Exception{
-        int i,m=-1,j;
-        try{
-            i=Integer.parseInt(s);
-            j=Integer.parseInt(t);
-            m=i/j;
-        }catch (NumberFormatException e){
+    public static int test(String s, String t) throws Exception {
+        int i, m = -1, j;
+        try {
+            i = Integer.parseInt(s);
+            j = Integer.parseInt(t);
+            m = i / j;
+        } catch (NumberFormatException e) {
             System.out.println("N");
-        }catch (ArithmeticException e){
+        } catch (ArithmeticException e) {
             System.out.println("A");
             throw new Exception("iidf");
-        }finally {
+        } finally {
             {
                 System.out.println("F");
             }

@@ -1,6 +1,4 @@
-package program.interfacetest;
-
-import java.util.List;
+package program.javaTest.interfacetest;
 
 /**
  * Created by wdfwolf3 on 2017/7/6.

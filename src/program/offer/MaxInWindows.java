@@ -9,10 +9,11 @@ import java.util.PriorityQueue;
  */
 public class MaxInWindows {
     public static void main(String[] args) {
-        int[] nums = {2,3,4,2,6,2,5,1};
+        int[] nums = {2, 3, 4, 2, 6, 2, 5, 1};
         System.out.println(new MaxInWindows().maxInWindows(nums, 3));
     }
-    public ArrayList<Integer> maxInWindows(int [] num, int size){
+
+    public ArrayList<Integer> maxInWindows(int[] num, int size) {
         PriorityQueue<Integer> queue = new PriorityQueue<>(size, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
@@ -24,7 +25,7 @@ public class MaxInWindows {
         for (; i < size; i++)
             queue.offer(num[i]);
         list.add(queue.peek());
-        for (;i < num.length;i++){
+        for (; i < num.length; i++) {
             queue.remove(num[left++]);
             queue.offer(num[i]);
             list.add(queue.peek());

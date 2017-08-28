@@ -13,7 +13,7 @@ import com.sun.jna.platform.win32.WinUser.KBDLLHOOKSTRUCT;
 import com.sun.jna.platform.win32.WinUser.LowLevelKeyboardProc;
 
 
-public class KeyBoardHook implements Runnable{
+public class KeyBoardHook implements Runnable {
     static HHOOK keyboardHHK;    // 键盘钩子的句柄
     static LowLevelKeyboardProc keyboardHook;            // 键盘钩子函数
 

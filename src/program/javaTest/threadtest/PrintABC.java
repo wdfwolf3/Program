@@ -1,4 +1,4 @@
-package program.MyThread;
+package program.javaTest.threadtest;
 
 /**
  * Created by wdfwolf3 on 2017/5/5.
@@ -39,11 +39,11 @@ public class PrintABC implements Runnable {
     }
 
     @Override
-    public void run(){
+    public void run() {
         int count = 10;
         for (int i = 0; i < count; i++) {
-            synchronized (pre){
-                synchronized (self){
+            synchronized (pre) {
+                synchronized (self) {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {

@@ -48,11 +48,11 @@ public class Playing {
                     players[index].setRole(k, 2);
                     players[index].setScore(players[index].getScore() + scores[2]);
                 }
-                int index1 = sequence[random.nextInt(roles[1]+roles[2])+roles[0]];
-                System.out.println("好人mvp：" + index1 +"号+1分");
+                int index1 = sequence[random.nextInt(roles[1] + roles[2]) + roles[0]];
+                System.out.println("好人mvp：" + index1 + "号+1分");
                 players[index1].setScore(players[index1].getScore() + 1);
                 int index2 = sequence[random.nextInt(roles[0])];
-                System.out.println("狼人mvp：" + index2 +"号+1分");
+                System.out.println("狼人mvp：" + index2 + "号+1分");
                 players[index2].setScore(players[index2].getScore() + 1);
             } else {
                 for (int i = 0; i < roles[0]; i++) {
@@ -71,11 +71,11 @@ public class Playing {
                     players[index].setResult(k, 1);
                     players[index].setRole(k, 2);
                 }
-                int index1 = sequence[random.nextInt(roles[1]+roles[2])+roles[0]];
-                System.out.println("好人mvp：" + index1 +"号+1分");
+                int index1 = sequence[random.nextInt(roles[1] + roles[2]) + roles[0]];
+                System.out.println("好人mvp：" + index1 + "号+1分");
                 players[index1].setScore(players[index1].getScore() + 1);
                 int index2 = sequence[random.nextInt(roles[0])];
-                System.out.println("狼人mvp：" + index2 +"号+1分");
+                System.out.println("狼人mvp：" + index2 + "号+1分");
                 players[index2].setScore(players[index2].getScore() + 1);
             }
         }
@@ -120,8 +120,8 @@ public class Playing {
         });
 
         for (Player player : players) {
-            System.out.printf("%2d",player.getNumber());
-            System.out.println( "号：" + player.getScore() + "分 " + Roles.values()[player.getRole(0)] + Result.values()[player.getResult(0)] + "" + Roles.values()[player.getRole(1)] + Result.values()[player.getResult(1)] + "" + Roles.values()[player.getRole(2)] + Result.values()[player.getResult(2)]);
+            System.out.printf("%2d", player.getNumber());
+            System.out.println("号：" + player.getScore() + "分 " + Roles.values()[player.getRole(0)] + Result.values()[player.getResult(0)] + "" + Roles.values()[player.getRole(1)] + Result.values()[player.getResult(1)] + "" + Roles.values()[player.getRole(2)] + Result.values()[player.getResult(2)]);
         }
     }
 }
