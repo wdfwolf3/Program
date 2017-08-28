@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="WebApp_ID" version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <servlet>
+        <!-- 这里名称随意，因为打成war包放进tomcat，访问url路径与这里的名字没有关系。 -->
+        <servlet-name>HttpRequest</servlet-name>
+        <!--用来指定servlet的实现类-->
+        <servlet-class>com.wdf.HttpRequest</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <!-- 名称需与servlet里的name一致 -->
+        <servlet-name>HttpRequest</servlet-name>
+        <!-- 页面中调用servlet类时，名称可以任意取，但是需要/ -->
+        <url-pattern>/my</url-pattern>
+    </servlet-mapping>
+</web-app>
