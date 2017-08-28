@@ -1,4 +1,4 @@
-package program.javaTest;
+package program.javaTest.reflect;
 
 import java.lang.reflect.*;
 import java.util.ArrayList;
