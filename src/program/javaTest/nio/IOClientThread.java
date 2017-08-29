@@ -6,7 +6,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class IOClientThread implements Runnable{
+public class IOClientThread implements Runnable {
     private InputStream inputStream;
 
     public IOClientThread(InputStream inputStream) {
@@ -20,11 +20,11 @@ public class IOClientThread implements Runnable{
             Thread thread = new Thread(new IOClientThread(socket.getInputStream()));
             thread.start();
             Scanner scanner = new Scanner(System.in);
-            while (scanner.hasNext()){
+            while (scanner.hasNext()) {
                 String s = scanner.next();
                 outputStream.write(s.getBytes());
                 outputStream.flush();
-                if ("exit".equals(s)){
+                if ("exit".equals(s)) {
                     thread.join();
                     break;
                 }
@@ -43,9 +43,9 @@ public class IOClientThread implements Runnable{
         int i = 0;
         byte[] bytes = new byte[1024];
         try {
-            while ((i = inputStream.read(bytes)) != -1){
-                String s = new String(bytes,0,4);
-                if ("exit".equals(s)){
+            while ((i = inputStream.read(bytes)) != -1) {
+                String s = new String(bytes, 0, 4);
+                if ("exit".equals(s)) {
                     break;
                 }
                 System.out.println(new String(bytes));

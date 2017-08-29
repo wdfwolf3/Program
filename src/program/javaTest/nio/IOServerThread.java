@@ -8,7 +8,7 @@ import java.net.Socket;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class IOServerThread implements Runnable{
+public class IOServerThread implements Runnable {
     private OutputStream outputStream;
 
     public IOServerThread(OutputStream outputStream) {
@@ -25,9 +25,9 @@ public class IOServerThread implements Runnable{
             int i = 0;
             Thread thread = new Thread(new IOServerThread(socket.getOutputStream()));
             thread.start();
-            while ((i = inputStream.read(bytes)) != -1){
-                String s = new String(bytes,0,4);
-                if ("exit".equals(s)){
+            while ((i = inputStream.read(bytes)) != -1) {
+                String s = new String(bytes, 0, 4);
+                if ("exit".equals(s)) {
                     out.write(s.getBytes());
                     out.flush();
                     TimeUnit.SECONDS.sleep(5);
@@ -48,7 +48,7 @@ public class IOServerThread implements Runnable{
     @Override
     public void run() {
         Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNext()){
+        while (scanner.hasNext()) {
             String s = scanner.next();
             try {
                 outputStream.write(s.getBytes());

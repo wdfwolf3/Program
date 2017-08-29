@@ -11,15 +11,15 @@ import java.util.Scanner;
 public class DynamicTest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        while (true){
+        while (true) {
             try {
                 BufferedReader bufferedReader = new BufferedReader(new FileReader("src/nio.txt"));
                 String s = null;
                 List<String> list = new ArrayList<>();
-                while ((s=bufferedReader.readLine())!=null){
+                while ((s = bufferedReader.readLine()) != null) {
                     list.add(s);
                 }
-                for (String name : list){
+                for (String name : list) {
                     Class c = Class.forName(name);
                     System.out.println(c.getName());
                     Object object = c.newInstance();

@@ -1,11 +1,9 @@
 package program.javaTest;
 
 import java.util.Base64;
-import java.util.concurrent.ThreadPoolExecutor;
 
 public interface InterfaceTest {
     int n = 0;
-
 
 
     static void main(String[] args) {
@@ -13,7 +11,7 @@ public interface InterfaceTest {
         print();
     }
 
-    static void print(){
+    static void print() {
         String s = "12ksadjlkfjsaldf";
         s = Base64.getEncoder().encodeToString(s.getBytes());
         System.out.println(s);
