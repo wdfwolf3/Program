@@ -10,17 +10,17 @@ public class PrintNBit {
             string += "0";
         char[] chars = string.toCharArray();
         int i = n - 1;
-        while (true){
+        while (true) {
             if (chars[i] != '9')
                 chars[i] = (char) (chars[i] + 1);
             else {
                 chars[i] = '0';
                 int j = i - 1;
                 for (; j >= 0; j--)
-                    if (chars[j] != '9'){
+                    if (chars[j] != '9') {
                         chars[j] += 1;
                         break;
-                    }else
+                    } else
                         chars[j] = '0';
                 if (j < 0)
                     break;
@@ -48,25 +48,25 @@ public class PrintNBit {
 
     public void printNBitII(int n) {
         StringBuilder builder = new StringBuilder("0");
-        while (true){
-            char c = builder.charAt(builder.length()-1);
+        while (true) {
+            char c = builder.charAt(builder.length() - 1);
             if (c != '9')
-                builder.setCharAt(builder.length()-1, (char) (c+1));
+                builder.setCharAt(builder.length() - 1, (char) (c + 1));
             else {
-                builder.setCharAt(builder.length()-1, '0');
-                int j = builder.length() -2;
+                builder.setCharAt(builder.length() - 1, '0');
+                int j = builder.length() - 2;
                 for (; j >= 0; j--)
-                    if (builder.charAt(j) != '9'){
-                        builder.setCharAt(j, (char) (builder.charAt(j)+1));
+                    if (builder.charAt(j) != '9') {
+                        builder.setCharAt(j, (char) (builder.charAt(j) + 1));
                         break;
-                    }else
-                        builder.setCharAt(j,'0');
+                    } else
+                        builder.setCharAt(j, '0');
                 if (j >= 0)
                     continue;
-                else if (builder.length()==n)
+                else if (builder.length() == n)
                     break;
                 else {
-                    builder.insert(0,'1');
+                    builder.insert(0, '1');
                 }
             }
             System.out.println(builder.toString());

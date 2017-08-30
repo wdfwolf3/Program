@@ -10,7 +10,7 @@ public class Two<T, K> {
     public Two() {
     }
 
-    public void set(T t, K k){
+    public void set(T t, K k) {
         this.k = k;
         this.t = t;
     }

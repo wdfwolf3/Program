@@ -3,9 +3,9 @@ package program.javaTest;
 import java.util.Arrays;
 
 public class ArrayTest {
-    public void typeCast(){
+    public void typeCast() {
         int[] nums = new int[5];
-        Object object =  nums;
+        Object object = nums;
         nums = (int[]) object;
 
 

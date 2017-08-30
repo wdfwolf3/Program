@@ -7,16 +7,16 @@ public class StringTest {
     public static void main(String[] args) throws InterruptedException {
         String greet = "😥hello!";
         System.out.println(greet.length());
-        int cp = greet.codePointCount(0,8);
+        int cp = greet.codePointCount(0, 8);
         System.out.println(greet.codePointAt(0));
         System.out.println(greet.codePointAt(1));
         System.out.println(greet.codePointAt(2));
         System.out.println(Character.isSupplementaryCodePoint(greet.codePointAt(2)));
         for (int i = 0; i < greet.length(); i++) {
-            if (Character.isSupplementaryCodePoint(greet.codePointAt(i))){
-                System.out.println(greet.substring(i,i+2));
+            if (Character.isSupplementaryCodePoint(greet.codePointAt(i))) {
+                System.out.println(greet.substring(i, i + 2));
                 i++;
-            }else
+            } else
                 System.out.println(greet.charAt(i));
         }
         System.out.println(Character.isSurrogate(greet.charAt(0)));
@@ -44,7 +44,7 @@ public class StringTest {
     }
 }
 
-class BufferAppend implements Runnable{
+class BufferAppend implements Runnable {
     private StringBuffer buffer;
 
     public BufferAppend(StringBuffer buffer) {
@@ -62,7 +62,7 @@ class BufferAppend implements Runnable{
     }
 }
 
-class BuilderAppend implements Runnable{
+class BuilderAppend implements Runnable {
     private StringBuilder builder;
 
     public BuilderAppend(StringBuilder builder) {

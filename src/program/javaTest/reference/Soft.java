@@ -24,17 +24,17 @@ public class Soft {
         System.out.println(softReference.get());
         List<Double[]> list = new ArrayList<>();
         long start = System.currentTimeMillis();
-        while (true){
-            if ((referenceQueue.poll()) == null){
+        while (true) {
+            if ((referenceQueue.poll()) == null) {
                 Double[] d = new Double[10000];
                 list.add(d);
-            }else {
+            } else {
                 System.out.println(softReference.get());
                 break;
             }
         }
         System.out.println(System.currentTimeMillis() - start + "ms被回收");
-        if (referenceQueue.poll() instanceof PhantomReference){
+        if (referenceQueue.poll() instanceof PhantomReference) {
             System.out.println(referenceQueue.poll().getClass().getName());
         }
 

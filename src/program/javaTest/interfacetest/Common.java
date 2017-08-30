@@ -4,7 +4,7 @@ package program.javaTest.interfacetest;
  * Created by wdfwolf3 on 2017/7/6.
  */
 public class Common<T> {
-    T list ;
+    T list;
 
 
     public Common(T t) {

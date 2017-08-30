@@ -16,24 +16,24 @@ public class OutClass {
         System.out.println("outDefault");
     }
 
-    public class InnerClass{
+    public class InnerClass {
         public InnerClass() {
             System.out.println("inner");
         }
 
-        public void prin(){
+        public void prin() {
             number = 10;
             System.out.println(number);
         }
     }
 }
 
-class OutClassImpl extends OutClass{
+class OutClassImpl extends OutClass {
     public OutClassImpl() {
         System.out.println("outImpl");
     }
 
-    public class InnerClassImpl extends OutClass.InnerClass{
+    public class InnerClassImpl extends OutClass.InnerClass {
         public InnerClassImpl() {
             System.out.println("innerImpl");
         }

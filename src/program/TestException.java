@@ -1,18 +1,13 @@
 package program;
 
 
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import static java.util.regex.Pattern.*;
-
 /**
  * Created by wdfwolf3 on 2017/2/15.
  */
-public class TestException extends NumberFormatException{
+public class TestException extends NumberFormatException {
     String message;
-    public TestException(String e){
+
+    public TestException(String e) {
         message = e;
         try {
             Thread.sleep(4);
@@ -21,7 +16,7 @@ public class TestException extends NumberFormatException{
         }
     }
 
-    public String getMessage(){
+    public String getMessage() {
         return message;
     }
 }
