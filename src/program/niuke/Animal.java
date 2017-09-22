@@ -1,7 +1,7 @@
 package program.niuke;
 
 public interface Animal {
-    public void eat();
+    void eat();
 }
 
 class Chicken implements Animal{
