@@ -10,13 +10,6 @@ public class InstanceTest {
 
 }
 
-class Con implements Runnable {
-    @Override
-    public void run() {
-
-    }
-}
-
 class A {
 
 }

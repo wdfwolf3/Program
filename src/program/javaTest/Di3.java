@@ -1,4 +1,4 @@
 package program.javaTest;
 
-public class Di1 {
+public class Di3 {
 }
