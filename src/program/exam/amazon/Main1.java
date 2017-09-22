@@ -1,4 +1,4 @@
-package program.amazon;
+package program.exam.amazon;
 
 public class Main1 {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Main1 {
     }
 }
 
-class Node{
+class Node {
     public Node next;
     public int val;
 

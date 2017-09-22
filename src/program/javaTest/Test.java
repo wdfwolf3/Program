@@ -1,10 +1,6 @@
 package program.javaTest;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.DelayQueue;
 
 public class Test {
 
@@ -48,15 +44,15 @@ public class Test {
         System.out.println(o.i);
     }
 
-    public void bb(final Other o){
+    public void bb(final Other o) {
         o.i++;
     }
 
-    public void aa(Object o){
+    public void aa(Object o) {
         System.out.println(1);
     }
 
-    public void aa(String s){
+    public void aa(String s) {
         System.out.println(2);
 
 //        List aaa = new ArrayList<? extends Collection>();
@@ -77,7 +73,7 @@ public class Test {
     }
 }
 
-class Other{
+class Other {
     public int i;
 }
 

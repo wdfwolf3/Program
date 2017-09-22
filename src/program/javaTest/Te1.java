@@ -10,8 +10,12 @@ public class Te1 {
     }
 }
 
-class T{}
+class T {
+}
 
-class A extends T{}
-class B extends A{}
+class A extends T {
+}
+
+class B extends A {
+}
 

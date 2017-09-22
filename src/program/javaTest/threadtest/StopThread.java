@@ -26,7 +26,7 @@ public class StopThread implements Runnable {
         } catch (InterruptedException e) {
             System.out.println("entry catch block!");
             long l = System.currentTimeMillis();
-            while (System.currentTimeMillis() - l < 5000);
+            while (System.currentTimeMillis() - l < 5000) ;
         }
         System.out.println("thread stop!");
     }

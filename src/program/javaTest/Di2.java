@@ -1,6 +1,5 @@
 package program.javaTest;
 
-import java.rmi.StubNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -17,13 +16,12 @@ public class Di2 {
 }
 
 
-
-class Student implements Comparable<Student>{
+class Student implements Comparable<Student> {
     Integer age;
 
     public Student(Integer age) {
         this.age = age;
-        long l = (long) Math.pow(2,2);
+        long l = (long) Math.pow(2, 2);
     }
 
     @Override
