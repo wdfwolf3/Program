@@ -7,7 +7,7 @@ public class increaseTest {
             nums[i] = i;
         }
         int i = 0;
-        while (nums[i]-- != 4){
+        while (nums[i]-- != 4) {
             System.out.println(i++);
         }
         for (int j = 0; j < nums.length; j++) {

@@ -1,6 +1,10 @@
 package program.javaTest;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.DelayQueue;
 
 public class Test {
 
@@ -37,6 +41,8 @@ public class Test {
         String e = d + "world";
         System.out.println(a == c);
         System.out.println(a == e);
+
+//        List aaa = new ArrayList<? extends Collection>();
     }
 
     public static void method(List<? super A> list) {
