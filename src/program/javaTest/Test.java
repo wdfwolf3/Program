@@ -1,13 +1,11 @@
 package program.javaTest;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Test {
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        List<Integer> list = new ArrayList<>(Arrays.asList(10,20,30,null));
 //        list = list.subList(2,4);
 //        System.out.println(list.size());
@@ -27,31 +25,31 @@ public class Test {
 //
 //        }
         int i = 0;
-        int j = (i++) +(++i);
-        j+=++j;
-        int k = (j>0)?j:++j;
-        System.out.println(""+i+j+k);
+        int j = (i++) + (++i);
+        j += ++j;
+        int k = (j > 0) ? j : ++j;
+        System.out.println("" + i + j + k);
 
         String a = "helloworld";
         final String b = "hello";
         String d = "hello";
         String c = b + "world";
-        String e = d+"world";
-        System.out.println(a==c);
-        System.out.println(a==e);
+        String e = d + "world";
+        System.out.println(a == c);
+        System.out.println(a == e);
     }
 
-    public static void method(List<? super A> list){
+    public static void method(List<? super A> list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(0));
         }
     }
 
-    static class A{
+    static class A {
 
     }
 
-    static class B extends A{
+    static class B extends A {
 
     }
 }

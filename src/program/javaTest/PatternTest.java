@@ -1,11 +1,5 @@
 package program.javaTest;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.Socket;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -32,7 +26,7 @@ public class PatternTest {
 //
         String string1 = "sdkfl";
         String[] strings = string1.split("d");
-        for(String string:strings){
+        for (String string : strings) {
             System.out.println(string);
         }
 

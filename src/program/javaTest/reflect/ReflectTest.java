@@ -62,15 +62,14 @@ public class ReflectTest {
 
     @SuppressWarnings("unchecked")
     public static List<Integer> getList(final List<Integer> list) {
-        Object proxy  = Proxy.newProxyInstance(ReflectTest.class.getClassLoader(), new Class[] { List.class },
+        Object proxy = Proxy.newProxyInstance(ReflectTest.class.getClassLoader(), new Class[]{List.class},
                 new InvocationHandler() {
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                         if ("add".equals(method.getName())) {
                             method.invoke(list, 0);
                             return method.invoke(list, args);
 //	                    throw new UnsupportedOperationException();
-                        }
-                        else {
+                        } else {
                             return method.invoke(list, args);
                         }
                     }

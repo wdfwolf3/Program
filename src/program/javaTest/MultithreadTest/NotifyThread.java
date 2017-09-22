@@ -1,6 +1,6 @@
 package program.javaTest.MultithreadTest;
 
-public class NotifyThread implements Runnable{
+public class NotifyThread implements Runnable {
     private Object object0;
     private Object object1;
     private int index;
@@ -15,8 +15,8 @@ public class NotifyThread implements Runnable{
     public void run() {
         System.out.println(index + "start");
         for (int i = 0; i < 10; i++) {
-            synchronized (object0){
-                synchronized (object1){
+            synchronized (object0) {
+                synchronized (object1) {
                     System.out.println(index + ":" + i);
                     object1.notify();
                 }
