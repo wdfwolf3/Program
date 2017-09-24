@@ -1,4 +1,4 @@
-package program.tengxun;
+package program.exam.tengxun;
 
 import java.util.Scanner;
 

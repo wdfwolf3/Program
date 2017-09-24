@@ -1,4 +1,4 @@
-package program;
+package program.javaTest;
 
 
 /**
@@ -17,6 +17,7 @@ public class TestException extends NumberFormatException {
     }
 
     public String getMessage() {
+        int i = (int) Math.sqrt(2);
         return message;
     }
 }

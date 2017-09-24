@@ -1,4 +1,4 @@
-package program.souhu;
+package program.exam.souhu;
 
 import java.util.ArrayList;
 import java.util.List;

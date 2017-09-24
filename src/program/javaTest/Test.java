@@ -37,6 +37,25 @@ public class Test {
         String e = d + "world";
         System.out.println(a == c);
         System.out.println(a == e);
+//        Test test = new Test();
+//        test.aa(null);
+        Other o = new Other();
+        new Test().bb(o);
+        System.out.println(o.i);
+    }
+
+    public void bb(final Other o) {
+        o.i++;
+    }
+
+    public void aa(Object o) {
+        System.out.println(1);
+    }
+
+    public void aa(String s) {
+        System.out.println(2);
+
+//        List aaa = new ArrayList<? extends Collection>();
     }
 
     public static void method(List<? super A> list) {
@@ -54,4 +73,7 @@ public class Test {
     }
 }
 
+class Other {
+    public int i;
+}
 
