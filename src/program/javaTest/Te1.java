@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Te1 {
     public static void main(String[] args) {
-        List<Class<? extends T>> list = new ArrayList<>();
-        list.add(B.class);
+        ArrayList<? extends T> list = new ArrayList<A>();
+//        list.add(new T());
     }
 }
 
